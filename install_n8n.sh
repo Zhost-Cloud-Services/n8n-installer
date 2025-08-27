@@ -30,12 +30,13 @@ fi
 
 N8N_DIR="/home/n8n"
 
-apt-get update
-apt-get install -y apt-transport-https ca-certificates curl software-properties-common
+export DEBIAN_FRONTEND=noninteractive
+apt-get update -yq
+apt-get install -yq apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 add-apt-repository -y "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-apt-get update
-apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose
+apt-get update -yq
+apt-get install -yq docker-ce docker-ce-cli containerd.io docker-compose
 
 mkdir -p $N8N_DIR
 
@@ -99,10 +100,10 @@ docker-compose up -d
 
 echo ""
 echo "╔═════════════════════════════════════════════════════════════╗"
-echo "║                                                             "
-echo "║  ✅ N8n đã được cài đặt thành công!                         "
-echo "║                                                             "
-echo "║  🌐 Truy cập: https://${DOMAIN}                             "
-echo "║                                                             "
+echo "║                                                             ║"
+echo "║     N8n đã được cài đặt thành công!                         ║"
+echo "║                                                             ║"
+echo "║     Truy cập: https://${DOMAIN}                             ║"
+echo "║                                                             ║"
 echo "╚═════════════════════════════════════════════════════════════╝"
 echo ""
