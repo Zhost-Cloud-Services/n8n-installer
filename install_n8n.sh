@@ -103,7 +103,7 @@ echo "╔═══════════════════════�
 echo "║                                                             ║"
 echo "║     N8n đã được cài đặt thành công!                         ║"
 echo "║                                                             ║"
-echo "║     Truy cập: https://${DOMAIN}                             ║"
+echo "║      Truy cập: https://${DOMAIN}                            ║"
 echo "║                                                             ║"
 echo "╚═════════════════════════════════════════════════════════════╝"
 echo ""
